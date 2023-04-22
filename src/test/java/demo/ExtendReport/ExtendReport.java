@@ -2,6 +2,7 @@ package demo.ExtendReport;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -31,9 +32,16 @@ public class ExtendReport {
 		WebDriver driver = new ChromeDriver();
 		driver.get("gmail.com");
 		System.out.println(driver.getTitle());
-		driver.close();
+		System.out.println(driver.getCurrentUrl());
+		System.out.println(driver.getPageSource());
+		//driver.close();
 		//test.addScreenCaptureFromBase64String(null);
 		test.fail("Result do not match");
 		extent.flush();
 	}
+	@AfterTest
+	public void quite() {
+		
+	}
+	
 }
