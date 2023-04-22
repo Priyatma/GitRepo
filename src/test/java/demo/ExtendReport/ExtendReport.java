@@ -34,8 +34,9 @@ public class ExtendReport {
 		System.out.println(driver.getTitle());
 		System.out.println(driver.getCurrentUrl());
 		System.out.println(driver.getPageSource());
+		System.out.println(driver.getWindowHandle());
 		//driver.close();
-		//test.addScreenCaptureFromBase64String(null);
+		test.addScreenCaptureFromBase64String(null);
 		test.fail("Result do not match");
 		extent.flush();
 	}
